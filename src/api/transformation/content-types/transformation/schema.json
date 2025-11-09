@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transformations",
+  "info": {
+    "singularName": "transformation",
+    "pluralName": "transformations",
+    "displayName": "transformation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ki": {
+      "type": "string"
+    },
+    "character": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::character.character",
+      "inversedBy": "transformations"
+    }
+  }
+}
